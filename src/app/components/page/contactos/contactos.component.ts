@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, NavigationExtras, Router } from '@angular/router';
 import { Icontactos } from 'src/app/models/icontactos';
+import { listaContactos } from 'src/app/service/contactService';
 
 @Component({
   selector: 'app-contactos',
@@ -9,25 +10,7 @@ import { Icontactos } from 'src/app/models/icontactos';
 })
 
 export class ContactosComponent implements OnInit {
-  listaContactos: Icontactos[] = [
-    {
-      id: 0,
-      nombre: 'Facundo',
-      apellido: 'Comercio',
-      email: 'facundo@Alura',
-      sexo: 'hombre'
 
-    },
-
-    {
-      id: 1,
-      nombre: 'Nancy',
-      apellido: 'Echeveria',
-      email: 'Nancy@Alura',
-      sexo: 'mujer'
-
-    }
-  ]
   constructor(private router: Router, private activateRoute: ActivatedRoute) { }
   ngOnInit(): void {
     this.activateRoute.queryParams.subscribe((params:any)=>{
