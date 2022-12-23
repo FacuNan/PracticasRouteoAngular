@@ -9,7 +9,7 @@ import { NotFoundComponent } from './components/page/not-found/not-found.compone
 import { ContactosComponent } from './components/page/contactos/contactos.component';
 import { DetallesContactoComponent } from './components/page/detalles-contacto/detalles-contacto.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-
+import { FormsModule } from '@angular/forms';
 @NgModule({
   declarations: [
     AppComponent,
@@ -23,7 +23,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule 
    
   ],
   providers: [],
