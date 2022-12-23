@@ -1,2 +1,13 @@
 <a routerLink="/login" >Iniciar Sesion</a>
+<ng-container *ngIf="contactoSeleccionado;else templateName">
+
+    <h4 *ngIf="contactoSeleccionado"> Has seleccionado al contacto {{contactoSeleccionado.nombre}}</h4>
+</ng-container>
+<ng-template  [ngOutletContext]="context" #templateName>
+    <p>Selecciona un amigo/a</p>
+</ng-template>
+
 <button (click)="navegarContactos()">Ver Contactos</button>
+
+
+<a [routerLink]="['/contacts']" [queryParams]="{sexo:'mujer'}">|Amigas</a>

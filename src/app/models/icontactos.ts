@@ -3,6 +3,7 @@ export interface Icontactos {
     nombre:string;
     apellido: string;
     email:string;
+    sexo: string;
 }
 
 
