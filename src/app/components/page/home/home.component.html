@@ -1,4 +1,4 @@
-<a routerLink="/login" >Iniciar Sesion</a>
+<a routerLink="/login" *ngIf="!token">Iniciar Sesion</a>
 <ng-container *ngIf="contactoSeleccionado;else templateName">
 
     <h4 *ngIf="contactoSeleccionado"> Has seleccionado al contacto {{contactoSeleccionado.nombre}}</h4>
