@@ -15,7 +15,7 @@ export class ContactsService {
         contacto.sexo == sexo)
       return Promise.resolve(listaFiltrada)
     } else if (sexo == 'todos') {
-      return Promise.resolve(this.listaContacts)
+      return Promise.resolve(listaContactos)
     } else {
       return Promise.reject('Ha ocurrido un error');
     }

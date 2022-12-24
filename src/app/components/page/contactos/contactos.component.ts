@@ -11,21 +11,17 @@ import { ContactsService } from 'src/app/service/contacts.service';
 })
 
 export class ContactosComponent implements OnInit {
-  filtroSexo: string = 'todos'
-  listaContactos: Icontactos[] = [];
-  constructor(private router: Router, private activateRoute: ActivatedRoute, private contactsService: ContactsService) { }
-  ngOnInit(): void {
-    this.activateRoute.queryParams.subscribe((params: any) => {
-      if (params.sexo) {
-        console.log(params.sexo)
-        this.filtroSexo = params.sexo
-      }
+filtroSexo: string = 'todos'
+listaContactos: Icontactos[]=[]
 
-      this.contactsService.obtenerContactos(this.filtroSexo)?.then((lista) => this.listaContactos = lista
-    
-      )
-      
+  constructor(private router: Router, private activateRoute: ActivatedRoute, private contactosService: ContactsService) { }
+  ngOnInit(): void {
+    this.activateRoute.queryParams.subscribe((params:any)=>{
+      console.log(params.sexo)
+      this.filtroSexo = params.sexo
+
     })
+    this.contactosService.obtenerContactos(this.filtroSexo)?.then((lista)=>this.listaContactos=lista)
   }
   volverHome(contacto: Icontactos) {
     let navigatorExtras: NavigationExtras = {
