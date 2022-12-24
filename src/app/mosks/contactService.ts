@@ -20,4 +20,4 @@ export const listaContactos: Icontactos[] = [
     }
   ]
 
-  let contacto: Icontactos[]=listaContactos
+  

@@ -1,9 +1,19 @@
 <div *ngFor="let contacto of listaContactos; let i =index">
-<div routerLink="{{contacto.id}}" >
-    <h6>{{contacto.nombre}}</h6>
-    <h6>{{contacto.apellido}}</h6>
-    <h6>{{contacto.email}}</h6>
-    <button (click)="volverHome(contacto)">Enviar Contacto</button>
-</div>
+    <div routerLink="{{contacto.id}}" [state]="{data:contacto, filtro: filtroSexo}">
+        <h6>{{contacto.nombre}}</h6>
+        <h6>{{contacto.apellido}}</h6>
+        <h6>{{contacto.email}}</h6>
+        <button (click)="volverHome(contacto)">Selecciona Amigo </button>
+    </div>
 
 </div>
+
+<ng-container *ngIf="filtroSexo === 'mujer'|| filtroSexo === 'hombre';else templateName">
+    <p>mostrando lista filtrada</p>
+    <p>mostrando amigos {{filtroSexo}}</p>
+</ng-container>
+<ng-template #templateName>
+    <p>Mostrando lista completa</p>
+</ng-template>
+
+<a routerLink="/home">Volver al inicio</a>

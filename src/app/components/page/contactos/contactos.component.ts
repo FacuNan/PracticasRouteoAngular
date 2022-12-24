@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, NavigationExtras, Router } from '@angular/router';
 import { Icontactos } from 'src/app/models/icontactos';
-import { listaContactos } from 'src/app/service/contactService';
+import { ContactsService } from 'src/app/service/contacts.service';
+
 
 @Component({
   selector: 'app-contactos',
@@ -10,11 +11,20 @@ import { listaContactos } from 'src/app/service/contactService';
 })
 
 export class ContactosComponent implements OnInit {
-
-  constructor(private router: Router, private activateRoute: ActivatedRoute) { }
+  filtroSexo: string = 'todos'
+  listaContactos: Icontactos[] = [];
+  constructor(private router: Router, private activateRoute: ActivatedRoute, private contactsService: ContactsService) { }
   ngOnInit(): void {
-    this.activateRoute.queryParams.subscribe((params:any)=>{
-      console.log(params.sexo)
+    this.activateRoute.queryParams.subscribe((params: any) => {
+      if (params.sexo) {
+        console.log(params.sexo)
+        this.filtroSexo = params.sexo
+      }
+
+      this.contactsService.obtenerContactos(this.filtroSexo)?.then((lista) => this.listaContactos = lista
+    
+      )
+      
     })
   }
   volverHome(contacto: Icontactos) {
