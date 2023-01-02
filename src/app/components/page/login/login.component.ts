@@ -9,8 +9,7 @@ import { AuthService } from 'src/app/service/auth.service';
 })
 
 export class LoginComponent implements OnInit {
-  email: string = '';
-  password: string ='';
+ 
   constructor(private router: Router, private authService:AuthService) { }
   
   ngOnInit(): void {
@@ -24,8 +23,9 @@ export class LoginComponent implements OnInit {
 
   }
  
-  loginUser() {
-    this.authService.login(this.email, this.password).subscribe((response)=>{
+  loginUser(value: any) {
+    let{email, password}= value;
+    this.authService.login(email, password).subscribe((response)=>{
       this.router.navigate(['contacts'])
       if(response.token){
         sessionStorage.setItem('token', response.token)

@@ -17,7 +17,7 @@ listaContactos: Icontactos[]=[]
   constructor(private router: Router, private activateRoute: ActivatedRoute, private contactosService: ContactsService) { }
   ngOnInit(): void {
     this.activateRoute.queryParams.subscribe((params:any)=>{
-      console.log(params.sexo)
+      console.log(params)
       this.filtroSexo = params.sexo
 
     })

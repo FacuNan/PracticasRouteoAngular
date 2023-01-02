@@ -12,23 +12,23 @@ export class HomeComponent implements OnInit {
   contactoSeleccionado: Icontactos | undefined;
   constructor(private router: Router) { }
   ngOnInit(): void {
-    this.token= sessionStorage.getItem('token');
+    this.token = sessionStorage.getItem('token');
     if (history.state.data) {
       console.log(history.state.data)
       this.contactoSeleccionado = history.state.data
- 
+
     }
 
 
   }
 
   navegarContactos(): void {
-    let navigationExtras: NavigationExtras={
-      queryParams:{
+    let navigationExtras: NavigationExtras = {
+      queryParams: {
         filter: 'mujer'
       }
     }
-    this.router.navigate(['contacts']),navigationExtras;
+    this.router.navigate(['contacts']), navigationExtras;
   }
 
 }

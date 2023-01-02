@@ -9,7 +9,10 @@ import { NotFoundComponent } from './components/page/not-found/not-found.compone
 import { ContactosComponent } from './components/page/contactos/contactos.component';
 import { DetallesContactoComponent } from './components/page/detalles-contacto/detalles-contacto.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { MaterialModule } from './modules/material/material.module';
+import { LoginFormComponent } from './components/login-form/login-form.component';
+import { PipePipe } from './pipes/pipe.pipe';
 @NgModule({
   declarations: [
     AppComponent,
@@ -17,14 +20,18 @@ import { FormsModule } from '@angular/forms';
     LoginComponent,
     NotFoundComponent,
     ContactosComponent,
-    DetallesContactoComponent
+    DetallesContactoComponent,
+    LoginFormComponent,
+    PipePipe
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     HttpClientModule,
-    FormsModule 
+    FormsModule,
+    MaterialModule,
+    ReactiveFormsModule
    
   ],
   providers: [],
