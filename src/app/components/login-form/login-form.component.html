@@ -11,7 +11,7 @@
                 <mat-error *ngIf="Email?.errors?.['required']&& Email?.touched">
                     El campo es obligatorio
                 </mat-error>
-                <mat-error *ngIf="Email?.errors?.['email']&& Email?.touched">
+                <mat-error *ngIf="Email?.errors?.['email']&& Email?.touched" color="{red}">
                     El formato no es valido
                 </mat-error>
 

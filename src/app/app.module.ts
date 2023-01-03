@@ -13,6 +13,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MaterialModule } from './modules/material/material.module';
 import { LoginFormComponent } from './components/login-form/login-form.component';
 import { PipePipe } from './pipes/pipe.pipe';
+import { RandomUserComponent } from './components/random-user/random-user.component';
+import { RandomContactComponent } from './components/page/random-contact/random-contact.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -22,7 +24,9 @@ import { PipePipe } from './pipes/pipe.pipe';
     ContactosComponent,
     DetallesContactoComponent,
     LoginFormComponent,
-    PipePipe
+    PipePipe,
+    RandomUserComponent,
+    RandomContactComponent
   ],
   imports: [
     BrowserModule,

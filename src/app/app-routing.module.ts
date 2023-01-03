@@ -5,6 +5,8 @@ import { DetallesContactoComponent } from './components/page/detalles-contacto/d
 import { HomeComponent } from './components/page/home/home.component';
 import { LoginComponent } from './components/page/login/login.component';
 import { NotFoundComponent } from './components/page/not-found/not-found.component';
+import { RandomContactComponent } from './components/page/random-contact/random-contact.component';
+import { RandomUserComponent } from './components/random-user/random-user.component';
 import { AuthGuard } from './guards/auth.guard';
 
 const routes: Routes = [
@@ -39,6 +41,15 @@ const routes: Routes = [
     path:'contacts/:id',
     component: DetallesContactoComponent,
     canActivate:[AuthGuard]
+  },
+  {
+    path:'random',
+    component: RandomContactComponent,
+   
+  },
+  {
+path: 'user',
+component: RandomUserComponent
   },
   
   {

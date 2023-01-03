@@ -1,0 +1,66 @@
+{
+    "results": [
+        {
+            "gender": "female",
+            "name": {
+                "title": "Mrs",
+                "first": "Sofia",
+                "last": "Park"
+            },
+            "location": {
+                "street": {
+                    "number": 9930,
+                    "name": "Argyle St"
+                },
+                "city": "Bath",
+                "state": "Yukon",
+                "country": "Canada",
+                "postcode": "F2P 1F1",
+                "coordinates": {
+                    "latitude": "-68.2522",
+                    "longitude": "75.5136"
+                },
+                "timezone": {
+                    "offset": "+6:00",
+                    "description": "Almaty, Dhaka, Colombo"
+                }
+            },
+            "email": "sofia.park@example.com",
+            "login": {
+                "uuid": "eb7cf20f-cd77-47a4-a368-8f32f7b6ab2f",
+                "username": "lazyleopard961",
+                "password": "getmoney",
+                "salt": "2BDCQqxp",
+                "md5": "2f6a503fbcf498174b5dbee6319669ed",
+                "sha1": "9072a082de3103f6cefcc8e9720ee2be94e98c40",
+                "sha256": "06ecd3504f10d73eeb458053a4730c8bb1225cb09e3d91df35ae41cb7e3bb7dd"
+            },
+            "dob": {
+                "date": "1955-08-17T20:08:56.151Z",
+                "age": 67
+            },
+            "registered": {
+                "date": "2005-12-22T22:21:59.948Z",
+                "age": 17
+            },
+            "phone": "L74 Q71-9481",
+            "cell": "U67 U32-6188",
+            "id": {
+                "name": "SIN",
+                "value": "702718743"
+            },
+            "picture": {
+                "large": "https://randomuser.me/api/portraits/women/94.jpg",
+                "medium": "https://randomuser.me/api/portraits/med/women/94.jpg",
+                "thumbnail": "https://randomuser.me/api/portraits/thumb/women/94.jpg"
+            },
+            "nat": "CA"
+        }
+    ],
+    "info": {
+        "seed": "8436814d3d566e00",
+        "results": 1,
+        "page": 1,
+        "version": "1.4"
+    }
+}
