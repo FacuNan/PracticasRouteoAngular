@@ -1,12 +1,13 @@
 import { Pipe, PipeTransform } from '@angular/core';
-import { Icontactos } from '../models/icontactos';
+
+import { IRadomContact } from '../models/randomUser.interface';
 
 @Pipe({
-  name: 'pipe'
+  name: 'nombreCompleto'
 })
 export class PipePipe implements PipeTransform {
-transform(contacto: Icontactos, ...args: unknown[]): unknown {
-   return `${contacto.nombre} ${contacto.apellido}`
+transform(contacto: IRadomContact, ...args: unknown[]): unknown {
+   return ` ${ contacto.name.title} ${contacto.name.first} ${contacto.name.last}`
   }
 
 }

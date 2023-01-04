@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Icontactos } from 'src/app/models/icontactos';
+import { IRadomContact } from 'src/app/models/randomUser.interface';
 
 @Component({
   selector: 'app-detalles-contacto',
@@ -10,13 +11,8 @@ import { Icontactos } from 'src/app/models/icontactos';
 export class DetallesContactoComponent implements OnInit{
   id: any | undefined;
   filtro: string = 'todos'
-  contacto: Icontactos = {
-    id: 0,
-    nombre:'',
-    apellido:'',
-    email:'',
-    sexo:'mujer'
-  };
+  contacto: IRadomContact | undefined;
+
 constructor(private router: ActivatedRoute){}
   ngOnInit(): void {
    this.router.params.subscribe((params: any)=>{

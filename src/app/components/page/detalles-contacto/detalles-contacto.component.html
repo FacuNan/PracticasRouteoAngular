@@ -1,9 +1,9 @@
 <h1>ID Contacto: {{id}} </h1>
 
-<ng-container *ngIf="contacto.email;else templateName">
+<ng-container *ngIf="contacto;else templateName">
 
-    <h2>Nombre:{{contacto.nombre}}</h2>
-    <h2>Apellido:{{contacto.apellido}}</h2>
+    <h2>Nombre:{{contacto | nombreCompleto}}</h2>
+   
     <h2>Email: {{contacto.email}}</h2>
 </ng-container>
 

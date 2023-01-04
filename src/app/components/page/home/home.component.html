@@ -2,7 +2,7 @@
 
 <ng-container *ngIf="contactoSeleccionado;else templateName">
 
-    <h4 *ngIf="contactoSeleccionado"> Has seleccionado al contacto {{contactoSeleccionado.nombre}}</h4>
+    <h4 *ngIf="contactoSeleccionado"> Has seleccionado al contacto {{contactoSeleccionado.name.first}}</h4>
 </ng-container>
 <ng-template  #templateName>
     <p>Selecciona un amigo/a</p>
@@ -11,5 +11,5 @@
 <button (click)="navegarContactos()">Ver Contactos</button>
 
 
-<a [routerLink]="['/contacts']" [queryParams]="{sexo:'mujer'}">Amigas|</a>
-<a [routerLink]="['/contacts']" [queryParams]="{sexo:'hombre'}">|Amigos</a>
+<a [routerLink]="['/contacts']" [queryParams]="{sexo:'female'}">Amigas|</a>
+<a [routerLink]="['/contacts']" [queryParams]="{sexo:'male'}">|Amigos</a>

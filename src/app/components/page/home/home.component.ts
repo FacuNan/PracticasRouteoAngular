@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { NavigationExtras, Router } from '@angular/router';
 import { Icontactos } from 'src/app/models/icontactos';
+import { IRadomContact } from 'src/app/models/randomUser.interface';
 
 @Component({
   selector: 'app-home',
@@ -9,7 +10,7 @@ import { Icontactos } from 'src/app/models/icontactos';
 })
 export class HomeComponent implements OnInit {
   token: string | null = null;
-  contactoSeleccionado: Icontactos | undefined;
+  contactoSeleccionado: IRadomContact | undefined;
   constructor(private router: Router) { }
   ngOnInit(): void {
     this.token = sessionStorage.getItem('token');
