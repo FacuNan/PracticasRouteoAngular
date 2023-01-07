@@ -15,6 +15,17 @@ import { LoginFormComponent } from './components/login-form/login-form.component
 import { PipePipe } from './pipes/pipe.pipe';
 import { RandomUserComponent } from './components/random-user/random-user.component';
 import { RandomContactComponent } from './components/page/random-contact/random-contact.component';
+import { NavComponent } from './components/nav/nav.component';
+import { LayoutModule } from '@angular/cdk/layout';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatButtonModule } from '@angular/material/button';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatIconModule } from '@angular/material/icon';
+import { MatListModule } from '@angular/material/list';
+import { DashboardComponent } from './components/page/dashboard/dashboard.component';
+import { TaskComponent } from './components/task/task.component';
+import { DragDropModule } from '@angular/cdk/drag-drop';
+import { TaskListComponent } from './components/page/task-list/task-list.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -26,7 +37,11 @@ import { RandomContactComponent } from './components/page/random-contact/random-
     LoginFormComponent,
     PipePipe,
     RandomUserComponent,
-    RandomContactComponent
+    RandomContactComponent,
+    NavComponent,
+    DashboardComponent,
+    TaskComponent,
+    TaskListComponent
   ],
   imports: [
     BrowserModule,
@@ -35,7 +50,14 @@ import { RandomContactComponent } from './components/page/random-contact/random-
     HttpClientModule,
     FormsModule,
     MaterialModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    LayoutModule,
+    MatToolbarModule,
+    MatButtonModule,
+    MatSidenavModule,
+    MatIconModule,
+    MatListModule,
+    DragDropModule
    
   ],
   providers: [],

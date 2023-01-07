@@ -29,7 +29,7 @@ export class HomeComponent implements OnInit {
         filter: 'mujer'
       }
     }
-    this.router.navigate(['contacts']), navigationExtras;
+    this.router.navigate(['dashboard/contacts']), navigationExtras;
   }
 
 }

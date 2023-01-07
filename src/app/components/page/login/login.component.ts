@@ -17,8 +17,8 @@ export class LoginComponent implements OnInit {
     let token = sessionStorage.getItem('token')
 
     if (token) {
-      this.router.navigate(['home'])
-      this.router.navigate(['contacts']);
+      this.router.navigate(['dashboard'])
+      this.router.navigate(['dashboard/contacts']);
     }
 
   }
@@ -26,7 +26,7 @@ export class LoginComponent implements OnInit {
   loginUser(value: any) {
     let{email, password}= value;
     this.authService.login(email, password).subscribe((response)=>{
-      this.router.navigate(['contacts'])
+      this.router.navigate(['dashboard/contacts'])
       if(response.token){
         sessionStorage.setItem('token', response.token)
       }

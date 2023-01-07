@@ -16,9 +16,12 @@ export class ContactosComponent implements OnInit {
   filtroSexo: string = 'todos'
 
   listaRandom: IRadomContact[] = [];
+  cargado: boolean = true;
 
   constructor(private router: Router, private activateRoute: ActivatedRoute, private contactosService: ContactsService, private randomService: RandomUserService) { }
   ngOnInit(): void {
+
+    this.cargado=true;
     this.activateRoute.queryParams.subscribe((params: any) => {
       console.log(params)
       if (params.sexo) {
@@ -33,7 +36,9 @@ export class ContactosComponent implements OnInit {
               console.log(this.listaRandom)
             },
             error: (error) => console.error(`${error}`),
-            complete: () => console.info('peticion completada')
+            complete: () => console.info('peticion completada'),
+            
+
           })
     
         }else{
@@ -61,7 +66,7 @@ export class ContactosComponent implements OnInit {
           console.log(this.listaRandom)
         },
         error: (error) => console.error(`${error}`),
-        complete: () => console.info('peticion completada')
+        complete: () => this.cargado=false
       })
 
     })
@@ -74,6 +79,6 @@ export class ContactosComponent implements OnInit {
       }
 
     }
-    this.router.navigate(['/home'], navigatorExtras)
+    this.router.navigate(['/dashboard'], navigatorExtras)
   }
 }
